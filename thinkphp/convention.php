@@ -59,7 +59,7 @@ return [
         // 禁止访问模块
         'deny_module_list'       => ['common'],
         // 默认控制器名
-        'default_controller'     => 'Install',
+        'default_controller'     => 'Index',
         // 默认操作名
         'default_action'         => 'index',
         // 是否自动转换URL中的控制器和操作名
@@ -263,24 +263,24 @@ return [
     'database'   => [
         // 数据库类型
         'type'            => 'mysql',
-        // 数据库连接DSN配置
-        'dsn'             => '',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => '{!!DATABSE_HOSTNAME!!}',
         // 数据库名
-        'database'        => '',
-        // 数据库用户名
-        'username'        => 'root',
-        // 数据库密码
-        'password'        => '',
-        // 数据库连接端口
-        'hostport'        => '',
+        'database'        => '{!!DATABSE_NAME!!}',
+        // 用户名
+        'username'        => '{!!DATABSE_USERNAME!!}',
+        // 密码
+        'password'        => '{!!DATABSE_PASSWORD!!}',
+        // 端口
+        'hostport'        => '{!!DATABSE_PORT!!}',
+        // 连接dsn
+        'dsn'             => '',
         // 数据库连接参数
         'params'          => [],
         // 数据库编码默认采用utf8
-        'charset'         => 'utf8',
+        'charset'         => '{!!DATABSE_CHAR!!}',
         // 数据库表前缀
-        'prefix'          => '',
+        'prefix'          => '{!!DATABSE_PREFIX!!}',
         // 数据库调试模式
         'debug'           => false,
         // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
